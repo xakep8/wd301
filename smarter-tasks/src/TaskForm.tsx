@@ -46,11 +46,11 @@ class TaskForm extends React.Component<TaskFormProps, TaskFormState> {
     return (
         <form onSubmit={this.addTask} className="flex flex-col">
             <label>Task Title</label>
-            <input className="m-2" id='todoTitle' type='text' value={this.state.title} onChange={this.titleChanged}/>
+            <input className="m-2" id='todoTitle' type='text' value={this.state.title} onChange={this.titleChanged} required/>
+            <label>Task Duedate</label>
+            <input className="m-2" id='todoDueDate' type='text' value={this.state.todoDueDate} onChange={this.dueDateChanged} required/>
             <label>Task Description</label>
             <input className="m-2" id='todoDescription' type='text' value={this.state.todoDescription} onChange={this.descriptionChanged}/>
-            <label>Task Duedate</label>
-            <input className="m-2" id='todoDueDate' type='text' value={this.state.todoDueDate} onChange={this.dueDateChanged}/>
             <button id='addTaskButton' type='submit'>Add item</button>
         </form>
     )
