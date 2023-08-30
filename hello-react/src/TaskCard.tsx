@@ -1,6 +1,14 @@
+import React from 'react'
 import './TaskCard.css'
 
-const TaskCard = (props) => {
+interface Tasks{
+  title:string;
+  dueDate?:string;
+  completedAtDate?:string;
+  assigneeName:string;
+}
+
+const TaskCard = (props:Tasks) => {
   if(props.dueDate){
     return (
       <div className="TaskItem w-full">
