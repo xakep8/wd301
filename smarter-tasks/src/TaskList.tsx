@@ -12,13 +12,4 @@ const TaskList=(props:Props)=>{
   ));
   return <>{list}</>
 };
-
-// class TaskList extends React.Component<Props, State> {
-  
-//   render() {
-//     return this.props.tasks.map((task, idx) => (
-//       <Task key={idx} title={task.title} todoDueDate={task.todoDueDate} todoDescription={task.todoDescription}/>
-//     ));
-//   }
-// }
 export default TaskList;
