@@ -1,1 +1,6 @@
-/* /home /tasks /tasks/* /signin /notfound 200
+/* 200
+/home 200
+/tasks 200
+/tasks/* 200
+/signin 200
+/notfound 200
