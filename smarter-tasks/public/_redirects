@@ -1,7 +1,7 @@
 /* /* 200
-/ / 200
-/home /home 200
-/tasks /tasks 200
+/ /index.html 200
+/home /home.html 200
+/tasks /tasks.html 200
 /tasks/* /tasks/* 200
-/signin /signin 200
-/notfound /notfound 200
+/signin /signin.html 200
+/notfound /notfound.html 200
