@@ -4,9 +4,9 @@ import HomePage from './pages/HomePage';
 import TaskListPage from './pages/TaskListPage';
 import Layout from './Layout';
 import TaskDetailsPage from './pages/TaskDetailsPage';
-import Signin from './pages/SignIn';
+import Signin from './pages/Signin';
 import ProtectedRoute from './ProtectedRoute';
-import NotfoundPage from './pages/NotfoundPage';
+import NotfoundPage from './pages/Notfound';
 
 
 const router = createBrowserRouter([

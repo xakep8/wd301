@@ -7,6 +7,7 @@ interface Props {
 }
 
 const TaskList=(props:Props)=>{
+  props.tasks.forEach((task,idx)=>(task.id=idx.toString()));
   const list= props.tasks.map((task, idx) => (
     <Task key={idx} idx={idx} taskItem={task} deleteTask={props.deleteTask}/>
   ));

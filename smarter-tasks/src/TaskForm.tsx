@@ -6,6 +6,7 @@ interface TaskFormProps {
 }
 
 interface TaskFormState {
+    id:string;
     title:string;
     todoDueDate:string;
     todoDescription:string;
@@ -13,6 +14,7 @@ interface TaskFormState {
 
 const TaskForm=(props:TaskFormProps)=>{
   const [formState,setFormState]=React.useState<TaskFormState>({
+    id:"",
     title:"",
     todoDescription:"",
     todoDueDate:"",
@@ -36,7 +38,7 @@ const TaskForm=(props:TaskFormProps)=>{
       return;
     }
     props.addTask(formState);
-    setFormState({title:"",todoDescription:"",todoDueDate:""});
+    setFormState({id:"",title:"",todoDescription:"",todoDueDate:""});
   };
   return (
       <form onSubmit={addTask} className="flex flex-col">
