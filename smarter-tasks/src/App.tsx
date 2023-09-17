@@ -11,7 +11,7 @@ import Logout from './pages/logout';
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Navigate to="/signup" replace />,
+    element: <Navigate to="/signin" replace />,
   },
   {
     path:"/logout",
