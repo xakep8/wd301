@@ -116,7 +116,6 @@ const NewMember = () => {
                           errors.password ? "border-red-500" : ""
                         }`}
                       />
-                      {errors.name && <span>This field is required</span>}
                       <button
                         type="submit"
                         id="create-member-btn"
