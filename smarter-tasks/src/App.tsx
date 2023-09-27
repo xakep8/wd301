@@ -1,55 +1,21 @@
 import './App.css';
-import {createBrowserRouter,Navigate,RouterProvider} from "react-router-dom";
-import Signin from './pages/signin';
-import ProtectedRoute from './ProtectedRoute';
-import NotfoundPage from './pages/Notfound';
-import Signup from './pages/signup';
-import Dashboard from './pages/dashboard';
-import Logout from './pages/logout';
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Navigate to="/signin" replace />,
-  },
-  {
-    path:"/logout",
-    element:<Logout/>
-  },
-  {
-    path: "/signin",
-    element: <Signin />,
-  },
-  {
-    path:"/signup",
-    element:<Signup/>
-  },
-  {
-    path:"/dashboard",
-    element: (
-      <ProtectedRoute>
-        <Dashboard/>
-      </ProtectedRoute>
-    ),
-  },
-  {
-    path:"*",
-    element:<Navigate to="/notfound" replace/>,
-  },
-  {
-    path:"/notfound",
-    element: <NotfoundPage/>
-  }
-]);
+import router from './routes';
+import { RouterProvider } from 'react-router-dom';
+import { ThemeContext } from './context/theme';
+import { useContext } from 'react';
+import { ProjectsProvider } from './context/projects/context';
 
 function App() {
-
+  const {theme} = useContext(ThemeContext);
   return (
     <>
-      <RouterProvider router={router}/>
+      <div className={`h-screen w-full mx-auto py-2 ${theme === "dark" ? "dark" : ""}`}>
+        <ProjectsProvider>
+          <RouterProvider router={router} />
+        </ProjectsProvider>
+      </div>
     </>
   );
 }
 
-export default App
+export default App;
