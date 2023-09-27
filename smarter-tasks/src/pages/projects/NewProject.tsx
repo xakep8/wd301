@@ -3,10 +3,10 @@ import { Fragment, useState } from 'react'
 import { useForm, SubmitHandler } from "react-hook-form";
 
 // First I'll import the addProject function
-import { addProject } from '../../../context/projects/actions';
+import { addProject } from '../../context/projects/actions';
 
 // Then I'll import the useProjectsDispatch hook from projects context
-import { useProjectsDispatch } from '../../../context/projects/context';
+import { useProjectsDispatch } from '../../context/projects/context';
 type Inputs = {
   name: string
 };
