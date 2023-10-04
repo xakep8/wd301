@@ -1,4 +1,5 @@
-import MemberList from "./MemberList";
+import React from "react";
+const MemberList = React.lazy(() => import("./MemberList"));
 import NewMember from "./NewMember";
 
 const Members = () => {
@@ -8,7 +9,8 @@ const Members = () => {
         <h2 className="text-2xl font-medium tracking-tight">Members</h2>
         <NewMember />
       </div>
-      <MemberList />
+        <MemberList />
+      
     </>
   );
 };

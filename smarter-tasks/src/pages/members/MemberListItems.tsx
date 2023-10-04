@@ -4,13 +4,12 @@ import { deleteUser } from "../../context/members/actions";
 
 export default function MemberListItems() {
   let state: any = useUsersState();
-  console.log(state);
   const dispatchUsers = useUsersDispatch();
   const handleDelete = (id: number) => {
     deleteUser(dispatchUsers, id);
   };
   const { users, isLoading, isError, errorMessage } = state;
-  
+  console.log(users);
 
   if (users.length === 0 && isLoading) {
     return <span>Loading...</span>;

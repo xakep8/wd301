@@ -23,10 +23,13 @@ export const initialState: UsersState = {
   users: [],
   isLoading: false,
   isError: false,
-  errorMessage: '',
+  errorMessage: "",
 };
 
-export const reducer = (state: UsersState = initialState,action: UsersActions): UsersState => {
+export const reducer = (
+  state: UsersState = initialState,
+  action: UsersActions
+): UsersState => {
   switch (action.type) {
     case "FETCH_USERS_REQUEST":
       return {

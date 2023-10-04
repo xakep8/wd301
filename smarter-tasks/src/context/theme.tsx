@@ -6,16 +6,16 @@ interface ThemeContextProps {
 }
 
 const ThemeContext = createContext<ThemeContextProps>({
-  theme: 'dark',
-  setTheme: () => {}
+  theme: "dark",
+  setTheme: () => {},
 });
 
 const ThemeProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [theme, setTheme] = useState('dark');
+  const [theme, setTheme] = useState("dark");
 
   const valueToShare = {
-    theme: theme,
-    setTheme: setTheme
+    theme,
+    setTheme,
   };
 
   return (

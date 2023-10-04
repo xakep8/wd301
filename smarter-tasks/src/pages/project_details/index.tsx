@@ -1,5 +1,5 @@
 import React from "react";
-import ProjectDetails from "./ProjectDetails";
+const ProjectDetails = React.lazy(() => import("./ProjectDetails"));
 import { Outlet } from "react-router-dom";
 import { TasksProvider } from "../../context/task/context";
 import { CommentProvider } from "../../context/comment/context";

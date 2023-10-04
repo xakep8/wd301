@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Dialog, Transition, Listbox } from "@headlessui/react";
 import  { Fragment, useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
