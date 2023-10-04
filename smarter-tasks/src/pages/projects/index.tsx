@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 const ProjectList = React.lazy(() => import("./ProjectList"));
 import NewProject from "./NewProject";
 
@@ -11,7 +11,9 @@ const Projects = () => {
         </h2>
         <NewProject />
       </div>
+        <Suspense fallback={<div className="suspense-loading">Loading...</div>}>
           <ProjectList />
+        </Suspense>
     </>
   );
 };
