@@ -11,6 +11,7 @@ import ProjectContainer from "../pages/projects/ProjectContainer";
 import ProjectDetails from "../pages/project_details";
 import NewTask from "../pages/tasks/NewTask";
 import TaskDetailsContainer from "../pages/tasks/TaskDetailsContainer";
+import { Suspense } from "react";
 
 
 const router = createBrowserRouter([
@@ -80,7 +81,7 @@ const router = createBrowserRouter([
       },
       {
         path: "members",
-        element: <Members />,
+        element: <Suspense fallback={<div className="suspense-loading">Loading...</div>}><Members /></Suspense>,
       },
     ],
   },
