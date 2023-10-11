@@ -15,4 +15,4 @@ const AccountLayout = () => {
   )
 }
 
-export default AccountLayout
+export default AccountLayout;
